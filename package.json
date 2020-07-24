@@ -1,0 +1,14 @@
+{
+  "name": "http-practice",
+  "version": "1.0.0",
+  "description": "A http practice project",
+  "main": "index.js",
+  "scripts": {
+    "http": "nodemon src/http/server.js"
+  },
+  "author": "Ryann",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
