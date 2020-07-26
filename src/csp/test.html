@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 还可以直接在 html meta 标签内指定 csp -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; report-uri /report"> -->
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    This is contents
+  </div>
+
+  <form action="http://baidu.com">
+    <button type="submit">click me</button>
+  </form>
+
+  <img width="600"
+  src="https://cn.bing.com/th?id=OHR.WheatCastilla_ZH-CN2814576294_UHD.jpg&pid=hp&w=2880&h=1620&rs=1&c=4&r=0" alt="">
+  
+  <script>
+    console.log('inline js')
+  </script>
+  <script src="/test.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</body>
+
+</html>
