@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 还可以直接在 html meta 标签内指定 csp -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; report-uri /report"> -->
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    This is contents, and data is: <span id="data"></span>
+    <button id="btn">Click</button>
+  </div>
+
+  <script>
+    var index = 0
+
+    function doRequest() {
+      var data = document.querySelector('#data')
+      data.innerText = ''
+      fetch('/data', {
+        headers: {
+          'X-Test-Cache': index++
+        }
+      }).then(function (res) {
+        return res.text()
+      }).then(function (text) {
+        data.innerText = text
+      })
+    }
+
+    var btn = document.querySelector('#btn').addEventListener('click', doRequest)
+  </script>
+</body>
+
+</html>
