@@ -4,11 +4,11 @@
   "description": "A http practice project",
   "main": "index.js",
   "scripts": {
-    "http": "nodemon src/http/server.js"
+    "server": "http-server -p 8887 ./src/"
   },
   "author": "Ryann",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "http-server": "^0.12.3"
   }
 }
